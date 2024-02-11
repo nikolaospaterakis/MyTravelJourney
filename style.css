@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+/* Header */
+
+header {
+    background-color: #F55A5A;
+    display: flex;
+    color: #FFFFFF;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    max-height: 100px;
+    min-height: 50px;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+header i {
+    font-size: 1.7rem;
+    animation: round 6s infinite
+}
+
+/* Section */
+
+section {
+    margin-top: 1em;
+    margin-bottom: 5em;
+    display: flex;
+    padding: 2em;
+    gap: 1em;
+    height: 35vh;
+    width: 100%;
+    align-items: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section img {
+    width: 17vh;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.content-details {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.content-details i {
+    color: #F55A5A;
+}
+
+.content-details div {
+    display: grid;
+    grid-row-gap: .3em;
+    grid-template-areas: 
+        "icon location . ."
+        "map map map map";
+}
+.content-details div  i {
+    grid-area: icon;
+}
+
+.content-details div p {
+    grid-area: location;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.content-details div a {
+    grid-area: map;
+    color: #918E9B;
+}
+
+.content-details div a:hover {
+    color: #F55A5A;
+}
+
+.content-details h2 {
+    font-size: 1.47 rem;
+}
+
+.content-details span {
+    font-weight: bold;
+    font-size: .9rem;
+    margin-top: .7em;
+}
+
+.content-details p {
+    font-size: .9rem;
+}
+
+@keyframes round {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@media (min-width: 500px) {
+    .content-details div {
+    display: flex;
+    gap: .4em;
+    align-items: center;
+    }
+}
+
+@media (min-width: 600px) {
+    section {
+        height: 40vh;
+        max-width: 550px;
+    }
+    
+    section img {
+        width: 20vh;
+    }
+    
+    .content-details h2 {
+        font-size: 1.6rem;
+    }
+    
+    .content-details p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1050px){
+    main {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: auto auto;
+    } 
+}
+
+@media (min-width: 1580px){
+    main {
+        display: flex;
+        width: 100%;
+        max-width: 2000px;
+    }
+    
+    section {
+        height: 50vh;
+        width: 100%;
+    }
+    
+    section img {
+        width: 28vh;
+    }
+    
+    .content-details h2 {
+        font-size: 2.2rem;
+    }
+    
+    .content-details p {
+        font-size: 1.1rem;
+    }
+    
+    .content-details div {
+        display: grid;
+        grid-row-gap: .3em;
+        grid-template-areas: 
+            "icon location . . . ."
+            "map map map map map map";
+    }
+} 
